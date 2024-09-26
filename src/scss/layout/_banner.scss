@@ -1,0 +1,56 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.banner {
+    position: relative;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, .7);
+        inset: 0;
+        display: flex; // aqui  se puso esto porque overlay es el; padre 
+        align-items: center; // de contenido video y desde ahi se acomoda
+    }
+
+ /*    picture {
+        display: block;
+        width: auto;
+        @include m.desktop {
+            width: 100%;
+        }
+    } */
+
+    img {
+        height: 450px;
+        @include m.tablet{
+            height: auto;
+        }
+    }
+}
+
+.content-banner {
+    z-index: 10;
+
+    h2 {
+        color: v.$white;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    h1 {
+        color: v.$white;
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    p {
+        display: inline-block;
+        padding: 1rem 0rem;
+        color: v.$white;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
