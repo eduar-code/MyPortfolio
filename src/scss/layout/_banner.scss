@@ -23,15 +23,16 @@
     } */
 
     img {
-        height: 450px;
-        @include m.tablet{
-            height: auto;
-        }
+        height: 40rem;
     }
 }
 
 .content-banner {
     z-index: 10;
+
+    @include m.desktop{
+        margin: 16rem;
+    }
 
     h2 {
         color: v.$white;
@@ -50,7 +51,7 @@
         display: inline-block;
         padding: 1rem 0rem;
         color: v.$white;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin: 0;
     }
 }
