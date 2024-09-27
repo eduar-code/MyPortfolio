@@ -1,0 +1,53 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.personalinfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0;  
+    margin: 0;
+    @include m.tablet {
+        flex-direction: row;
+        padding-top: 0;  
+        margin: 0; 
+    }
+}
+
+
+.content-personal {
+    border: 0 solid;
+    border-right: .1rem solid rgb(130, 130, 129);
+    border-bottom: .1rem solid rgb(130, 130, 129);
+    margin: 0;
+
+    h1 {
+        padding-top: 6.5rem;
+        padding-left: 2rem;
+        margin: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    h3 {
+        margin: 0;
+        padding-top: 1.5rem;
+        padding-left: 2rem;
+        text-align: left;
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    p {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .btn-cv{
+        padding-left: 2rem;
+        padding-bottom: 1rem;
+        p{
+            padding: 0;
+        }
+    }
+}

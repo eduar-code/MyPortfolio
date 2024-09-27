@@ -388,30 +388,25 @@ body > section {
   }
 }
 .header .content-header {
-  padding: 1rem;
-}
-@media (min-width: 768px) {
-  .header .content-header {
-    /*    display: flex;
-    justify-content: space-between;
-    align-items: center; */
-  }
+  padding: 2rem;
 }
 
 .nav-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 .nav-main .nav-main_option {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .nav-main .nav-main_option {
     flex-direction: row;
     align-items: center;
+    gap: 4rem;
   }
 }
 @media (min-width: 768px) {
@@ -422,31 +417,35 @@ body > section {
 }
 .nav-main a {
   color: #000000;
-  font-size: 2.2rem;
+  font-size: 1.7rem;
 }
 .nav-main a:hover, .nav-main a.active {
   color: #f35b5b;
 }
-.nav-main img {
-  height: 100px;
+@media (min-width: 1200px) {
+  .nav-main a {
+    font-size: 2.2rem;
+  }
+}
+.nav-main .photo {
+  display: none;
 }
 @media (min-width: 768px) {
-  .nav-main img {
+  .nav-main .photo {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     height: auto;
-    width: 5rem;
+    width: 15rem;
+    box-shadow: 0rem 0.1rem 0.3rem 0.9rem #fafafa;
+    border-radius: 20rem;
   }
 }
 
 .banner {
   position: relative;
   overflow: hidden;
-  /*    picture {
-         display: block;
-         width: auto;
-         @include m.desktop {
-             width: 100%;
-         }
-     } */
 }
 .banner .overlay {
   position: absolute;
@@ -461,10 +460,14 @@ body > section {
 
 .content-banner {
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .content-banner {
-    margin: 16rem;
+    margin-left: 16rem;
+    align-items: flex-start;
   }
 }
 .content-banner h2 {
@@ -475,8 +478,13 @@ body > section {
 }
 .content-banner h1 {
   color: #FFFFFF;
-  font-size: 5rem;
+  font-size: 3.5rem;
   margin: 0;
+}
+@media (min-width: 768px) {
+  .content-banner h1 {
+    font-size: 5rem;
+  }
 }
 .content-banner p {
   display: inline-block;
@@ -484,4 +492,52 @@ body > section {
   color: #FFFFFF;
   font-size: 1.5rem;
   margin: 0;
+}
+
+.personalinfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .personalinfo {
+    flex-direction: row;
+    padding-top: 0;
+    margin: 0;
+  }
+}
+
+.content-personal {
+  border: 0 solid;
+  border-right: 0.1rem solid rgb(130, 130, 129);
+  border-bottom: 0.1rem solid rgb(130, 130, 129);
+  margin: 0;
+}
+.content-personal h1 {
+  padding-top: 6.5rem;
+  padding-left: 2rem;
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.content-personal h3 {
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.content-personal p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1.5rem;
+}
+.content-personal .btn-cv {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+.content-personal .btn-cv p {
+  padding: 0;
 }/*# sourceMappingURL=app.css.map */

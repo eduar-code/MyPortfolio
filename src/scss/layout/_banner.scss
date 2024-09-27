@@ -14,14 +14,6 @@
         align-items: center; // de contenido video y desde ahi se acomoda
     }
 
- /*    picture {
-        display: block;
-        width: auto;
-        @include m.desktop {
-            width: 100%;
-        }
-    } */
-
     img {
         height: 40rem;
     }
@@ -29,9 +21,13 @@
 
 .content-banner {
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    @include m.desktop{
-        margin: 16rem;
+    @include m.tablet {
+        margin-left: 16rem;
+        align-items: flex-start;
     }
 
     h2 {
@@ -43,8 +39,12 @@
 
     h1 {
         color: v.$white;
-        font-size: 5rem;
+        font-size: 3.5rem;
         margin: 0;
+
+        @include m.tablet {
+            font-size: 5rem;
+        }
     }
 
     p {
