@@ -12,6 +12,12 @@
     }
 }
 
+@mixin mindesktop {
+    @media (min-width: v.$mindesktop) {
+        @content;
+    }
+}
+
 @mixin desktop {
     @media (min-width: v.$desktop) {
         @content;

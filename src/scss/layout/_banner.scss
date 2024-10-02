@@ -24,10 +24,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include m.container;
 
     @include m.tablet {
-        margin-left: 16rem;
+        margin-left: 15rem;
         align-items: flex-start;
+        //margin: 0 auto;
     }
 
     h2 {
