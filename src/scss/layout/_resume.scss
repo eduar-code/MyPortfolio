@@ -1,9 +1,78 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.resume{
+.resume {
     @include m.container;
-    h1{
+    
+    padding-top: 6rem;
+
+    h1 {
         font-size: 3rem;
+    }
+
+}
+
+.resume_order {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 0;
+
+
+    @include m.tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    @include m.mindesktop {
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+
+        .expertise {
+            grid-row: span 3 / span 3;
+        }
+
+        .education {
+            grid-row: span 3 / span 3;
+        }
+
+        .languages {
+            grid-column-start: 3;
+            grid-row-start: 2;
+        }
+    }
+
+}
+
+.expertise,
+.education,
+.skills,
+.languages {
+
+    border: .1rem solid v.$grey;
+    padding: 1.5rem;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .title-task {
+        border-bottom: .1rem solid v.$grey;
+    }
+
+    .title-task:last-of-type {
+        border: none;
+    }
+
+    .title-task_time {
+        padding-top: 5rem;
+    }
+
+    p {
+
+        font-size: 1.5rem;
     }
 }

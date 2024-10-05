@@ -523,8 +523,8 @@ body > section {
   .content-info {
     padding-bottom: 7rem;
     border: 0 solid;
-    border-right: 0.1rem solid rgb(130, 130, 129);
-    border-bottom: 0.1rem solid rgb(130, 130, 129);
+    border-right: 0.1rem solid #828281;
+    border-bottom: 0.1rem solid #828281;
   }
 }
 .content-info h1,
@@ -623,7 +623,77 @@ body > section {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
+  padding-top: 6rem;
 }
 .resume h1 {
   font-size: 3rem;
+}
+
+.resume_order {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .resume_order {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+@media (min-width: 1020px) {
+  .resume_order {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+  .resume_order .expertise {
+    grid-row: span 3/span 3;
+  }
+  .resume_order .education {
+    grid-row: span 3/span 3;
+  }
+  .resume_order .languages {
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+}
+
+.expertise,
+.education,
+.skills,
+.languages {
+  border: 0.1rem solid #828281;
+  padding: 1.5rem;
+}
+.expertise h1,
+.education h1,
+.skills h1,
+.languages h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+.expertise .title-task,
+.education .title-task,
+.skills .title-task,
+.languages .title-task {
+  border-bottom: 0.1rem solid #828281;
+}
+.expertise .title-task:last-of-type,
+.education .title-task:last-of-type,
+.skills .title-task:last-of-type,
+.languages .title-task:last-of-type {
+  border: none;
+}
+.expertise .title-task_time,
+.education .title-task_time,
+.skills .title-task_time,
+.languages .title-task_time {
+  padding-top: 5rem;
+}
+.expertise p,
+.education p,
+.skills p,
+.languages p {
+  font-size: 1.5rem;
 }/*# sourceMappingURL=app.css.map */
