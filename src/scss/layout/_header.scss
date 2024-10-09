@@ -3,19 +3,24 @@
 
 .header {
     background-color: v.$white;
-    box-shadow: .1rem .2rem .3rem #b6b5b5;
+    box-shadow: .1rem .2rem .3rem v.$shadow;
 
     @include m.tablet {
-        position: static;
-        left: 0;
-        top: 0;
-        width: 100%;
-        box-shadow: .1rem .2rem .3rem #b6b5b5;
+        &.fixed {
+            // toda esta clase es para poner el nav fijo junto el JS
+            position: fixed;
+            //position: static;
+            //position: sticky;
+            left: 0;
+            top: 0;
+            width: 100%;
+            box-shadow: .1rem .1rem 1.5rem v.$shadow;
+        }
     }
 
     .content-header {
         @include m.container;
-        padding: 2rem;
+        padding: 1rem;
     }
 
 }
@@ -36,6 +41,26 @@
             align-items: center;
             gap: 4rem;
         }
+
+        &_name {
+            display: none;
+            @include m.tablet{
+            display: flex;
+            flex-direction: column;
+                p {
+                    font-weight: 700;
+                    font-size: 1.4rem;
+                    text-align: center;
+                    margin: 0;
+                    padding: 0;
+
+                    &:last-of-type{
+                        font-weight: 400;
+                        font-size: 1.2rem;
+                    }
+                } 
+            }
+        }
     }
 
     @include m.tablet {
@@ -44,8 +69,9 @@
     }
 
     a {
-        color: v.$black;
+        color: v.$plusgrey;
         font-size: 1.7rem;
+        font-weight: 700;
 
         &:hover,
         &.active {
@@ -53,7 +79,7 @@
         }
 
         @include m.desktop {
-            font-size: 2.2rem;
+            font-size: 1.7rem;
         }
 
     }
@@ -70,7 +96,31 @@
             width: 15rem;
             box-shadow: 0rem .1rem .3rem .9rem #fafafa;
             border-radius: 20rem;
-
         }
+
+        &.disabled_photo {
+            animation: disabled .5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes disabled {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        /*     &.enabled_photo {
+            animation: enabled .5s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes enabled {
+            from {opacity: 0;}
+            to {opacity: 1;}
+          } */
     }
 }

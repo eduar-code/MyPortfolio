@@ -332,7 +332,7 @@ body.overflow-hidden {
 }
 
 p {
-  color: #000000;
+  color: #828281;
   line-height: 1.5;
 }
 
@@ -353,6 +353,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 4rem;
+  color: #474747;
 }
 
 h2 {
@@ -361,6 +362,7 @@ h2 {
 
 h3 {
   font-size: 6rem;
+  color: #474747;
   text-align: center;
 }
 
@@ -377,22 +379,22 @@ body > section {
 
 .header {
   background-color: #FFFFFF;
-  box-shadow: 0.1rem 0.2rem 0.3rem #b6b5b5;
+  box-shadow: 0.1rem 0.2rem 0.3rem #d7d7d7;
 }
 @media (min-width: 768px) {
-  .header {
-    position: static;
+  .header.fixed {
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    box-shadow: 0.1rem 0.2rem 0.3rem #b6b5b5;
+    box-shadow: 0.1rem 0.1rem 1.5rem #d7d7d7;
   }
 }
 .header .content-header {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .nav-main {
@@ -413,6 +415,26 @@ body > section {
     gap: 4rem;
   }
 }
+.nav-main .nav-main_option_name {
+  display: none;
+}
+@media (min-width: 768px) {
+  .nav-main .nav-main_option_name {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-main .nav-main_option_name p {
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-main .nav-main_option_name p:last-of-type {
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+}
 @media (min-width: 768px) {
   .nav-main {
     flex-direction: row;
@@ -420,19 +442,29 @@ body > section {
   }
 }
 .nav-main a {
-  color: #000000;
+  color: #474747;
   font-size: 1.7rem;
+  font-weight: 700;
 }
 .nav-main a:hover, .nav-main a.active {
   color: #f35b5b;
 }
 @media (min-width: 1200px) {
   .nav-main a {
-    font-size: 2.2rem;
+    font-size: 1.7rem;
   }
 }
 .nav-main .photo {
   display: none;
+  /*     &.enabled_photo {
+      animation: enabled .5s;
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes enabled {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    } */
 }
 @media (min-width: 768px) {
   .nav-main .photo {
@@ -444,6 +476,18 @@ body > section {
     width: 15rem;
     box-shadow: 0rem 0.1rem 0.3rem 0.9rem #fafafa;
     border-radius: 20rem;
+  }
+}
+.nav-main .photo.disabled_photo {
+  animation: disabled 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes disabled {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 
@@ -515,16 +559,16 @@ body > section {
 }
 
 .content-info {
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
   border: none;
   flex: 0 0 33.3%;
 }
 @media (min-width: 1020px) {
   .content-info {
-    padding-bottom: 7rem;
+    padding-bottom: 1rem;
     border: 0 solid;
-    border-right: 0.1rem solid #828281;
-    border-bottom: 0.1rem solid #828281;
+    border-right: 0.1rem solid #d7d7d7;
+    border-bottom: 0.1rem solid #d7d7d7;
   }
 }
 .content-info h1,
@@ -535,20 +579,23 @@ body > section {
 .content-info h1 {
   padding: 6rem 5rem 3rem;
   padding-top: 5rem;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 .content-info h3 {
   padding: 1.5rem 5rem 0rem;
   text-align: left;
-  font-size: 2rem;
+  font-size: 1.7rem;
+  color: #474747;
 }
 .content-info p {
   padding: 0rem 2rem 0rem 5rem;
   font-size: 1.5rem;
+  margin-top: 0.5rem;
+  color: #828281;
 }
 
 .info-resume-btn {
-  padding: 2rem 4rem;
+  padding: 1rem 3rem;
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
@@ -572,26 +619,29 @@ body > section {
   color: #FFFFFF;
 }
 .info-resume-btn_cv p {
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
   margin: 0;
   color: #f35b5b;
 }
 
 .info-personal p {
   font-weight: 700;
+  color: #474747;
 }
 .info-personal p span {
   font-weight: 400;
+  color: #828281;
 }
 
 .info-social {
-  padding: 3rem 5rem;
+  padding: 1rem 5rem;
   display: flex;
   gap: 2.5rem;
 }
 .info-social_icons {
   color: #f35b5b;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: transform 0.3s ease-in-out;
 }
 .info-social_icons:hover {
@@ -612,7 +662,7 @@ body > section {
 }
 .info-expertise_data h3 {
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   padding: 0;
 }
 .info-expertise_data p {
@@ -627,6 +677,23 @@ body > section {
 }
 .resume h1 {
   font-size: 3rem;
+}
+.resume progress {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 5rem;
+  background-color: #eee;
+}
+.resume progress[value]::-webkit-progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  border-radius: 5rem;
+  background-color: #eee;
+}
+.resume progress[value]::-webkit-progress-value {
+  width: 0;
+  border-radius: 5rem;
+  background-color: #f35b5b;
 }
 
 .resume_order {
@@ -662,7 +729,7 @@ body > section {
 .education,
 .skills,
 .languages {
-  border: 0.1rem solid #828281;
+  border: 0.1rem solid #d7d7d7;
   padding: 1.5rem;
 }
 .expertise h1,
@@ -677,7 +744,7 @@ body > section {
 .education .title-task,
 .skills .title-task,
 .languages .title-task {
-  border-bottom: 0.1rem solid #828281;
+  border-bottom: 0.1rem solid #d7d7d7;
 }
 .expertise .title-task:last-of-type,
 .education .title-task:last-of-type,
@@ -690,10 +757,19 @@ body > section {
 .skills .title-task_time,
 .languages .title-task_time {
   padding-top: 5rem;
+  color: #f35b5b;
 }
 .expertise p,
 .education p,
 .skills p,
 .languages p {
   font-size: 1.5rem;
+}
+
+.skills h1, .languages h1 {
+  padding-bottom: 2.5rem;
+}
+.skills p, .languages p {
+  font-size: 1.6rem;
+  margin: 1rem 0rem 0rem 0rem;
 }/*# sourceMappingURL=app.css.map */

@@ -10,13 +10,13 @@ const sass = gulpSass(dartSass);
 //import terser from 'gulp-terser'; // esto para quitas los espacios 
 //import sharp from 'sharp'//esto es para la modificacion de imagenes pequena o grandes
 
-/*export function js(done){
+export function js(done){
     src('src/js/app.js')
     //.pipe(terser())
     .pipe(dest('build/js'))
     
     done();
-}*/ //esto es para java y aun no se necesita
+} //esto es para java y aun no se necesita
 
 export function css(done) {
     src('src/scss/app.scss', {sourcemaps: true})
@@ -92,8 +92,8 @@ export function css(done) {
 
 export function dev() {
     watch('src/scss/**/*.scss', css)
-    //watch('src/js/**/*.js', js)
+    watch('src/js/**/*.js', js)
     //watch('src/img/**/*.{png, jpg}', imagenes)
 }
 
-export default series(/*crop, js,*/ css, /*imagenes,*/ dev)
+export default series(/*crop,*/ js, css, /*imagenes,*/ dev)

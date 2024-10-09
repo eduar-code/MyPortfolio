@@ -25,7 +25,7 @@ body {
     }
 }
 p {
-    color: v.$black;
+    color: v.$lightgrey;
     line-height: 1.5;
 }
 .container {
@@ -42,12 +42,14 @@ h1, h2, h3 {
 }
 h1 {
     font-size: 4rem;
+    color: v.$plusgrey;
 }
 h2 {
     font-size: 4.6rem;
 }
 h3 {
     font-size: 6rem;
+    color: v.$plusgrey;
     text-align: center;
 }
 img {
