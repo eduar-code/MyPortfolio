@@ -373,6 +373,14 @@ img {
   display: block;
 }
 
+li {
+  font-size: 1.3rem;
+  color: #828281;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: justify;
+}
+
 body > section {
   padding: 10rem 0;
 }
@@ -560,6 +568,7 @@ body > section {
 
 .content-info {
   padding-bottom: 0.5rem;
+  padding-right: 3rem;
   border: none;
   flex: 0 0 33.3%;
 }
@@ -592,6 +601,7 @@ body > section {
   font-size: 1.5rem;
   margin-top: 0.5rem;
   color: #828281;
+  text-align: justify;
 }
 
 .info-resume-btn {
@@ -620,7 +630,7 @@ body > section {
 }
 .info-resume-btn_cv p {
   padding: 1rem 2rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   margin: 0;
   color: #f35b5b;
 }
@@ -705,28 +715,57 @@ body > section {
 @media (min-width: 768px) {
   .resume_order {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     gap: 3rem;
+  }
+  .resume_order .expertise {
+    grid-row: span 4/span 4;
+  }
+  .resume_order .education {
+    grid-row: span 3/span 3;
+  }
+  .resume_order .courses {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  .resume_order .skills {
+    grid-row: span 2/span 2;
+    grid-row-start: 5;
+  }
+  .resume_order .languages {
+    grid-row-start: 5;
   }
 }
 @media (min-width: 1020px) {
   .resume_order {
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 3rem;
   }
   .resume_order .expertise {
-    grid-row: span 3/span 3;
+    grid-row: span 4/span 4;
   }
   .resume_order .education {
     grid-row: span 3/span 3;
   }
+  .resume_order .courses {
+    grid-column-start: 2;
+    grid-row-start: 4;
+  }
+  .resume_order .skills {
+    grid-row: span 2/span 2;
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
   .resume_order .languages {
     grid-column-start: 3;
-    grid-row-start: 2;
+    grid-row-start: 3;
   }
 }
 
 .expertise,
 .education,
+.courses,
 .skills,
 .languages {
   border: 0.1rem solid #d7d7d7;
@@ -734,6 +773,7 @@ body > section {
 }
 .expertise h1,
 .education h1,
+.courses h1,
 .skills h1,
 .languages h1 {
   font-size: 2.5rem;
@@ -742,34 +782,69 @@ body > section {
 }
 .expertise .title-task,
 .education .title-task,
+.courses .title-task,
 .skills .title-task,
 .languages .title-task {
   border-bottom: 0.1rem solid #d7d7d7;
 }
+.expertise .title-task_time,
+.education .title-task_time,
+.courses .title-task_time,
+.skills .title-task_time,
+.languages .title-task_time {
+  padding-top: 3.5rem;
+  color: #f35b5b;
+}
+.expertise .title-task_area,
+.education .title-task_area,
+.courses .title-task_area,
+.skills .title-task_area,
+.languages .title-task_area {
+  color: #474747;
+}
+.expertise .title-task_data,
+.education .title-task_data,
+.courses .title-task_data,
+.skills .title-task_data,
+.languages .title-task_data {
+  padding-bottom: 2rem;
+}
 .expertise .title-task:last-of-type,
 .education .title-task:last-of-type,
+.courses .title-task:last-of-type,
 .skills .title-task:last-of-type,
 .languages .title-task:last-of-type {
   border: none;
 }
-.expertise .title-task_time,
-.education .title-task_time,
-.skills .title-task_time,
-.languages .title-task_time {
-  padding-top: 5rem;
-  color: #f35b5b;
-}
 .expertise p,
 .education p,
+.courses p,
 .skills p,
 .languages p {
   font-size: 1.5rem;
 }
 
-.skills h1, .languages h1 {
+.courses-data {
+  border-bottom: 0.1rem solid #d7d7d7;
+}
+.courses-data h3 {
+  color: #f35b5b;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  padding-top: 2rem;
+  margin: 0;
+}
+.courses-data:last-of-type {
+  border: none;
+}
+
+.skills h1,
+.languages h1 {
   padding-bottom: 2.5rem;
 }
-.skills p, .languages p {
+.skills p,
+.languages p {
   font-size: 1.6rem;
   margin: 1rem 0rem 0rem 0rem;
 }/*# sourceMappingURL=app.css.map */
