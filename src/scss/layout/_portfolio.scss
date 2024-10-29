@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.portfolio {
+    @include m.container;
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    padding: 6rem 0rem 10rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: .7rem;
+
+    @include m.mindesktop {
+        grid-template-columns: repeat(4, minmax(8rem, 1fr));
+    }
+
+}
+
+.card {
+    background-color: v.$red;
+    height: 25rem;
+    transition: transform .2s;
+    cursor: pointer;
+
+    &:hover {
+       transform: scale(1.1);
+    }
+
+    @include m.mindesktop {
+        height: 40rem;
+    }
+}

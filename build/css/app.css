@@ -683,7 +683,7 @@ body > section {
   width: 95%;
   max-width: 120rem;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding: 6rem 0rem 0rem;
 }
 .resume h1 {
   font-size: 3rem;
@@ -847,4 +847,50 @@ body > section {
 .languages p {
   font-size: 1.6rem;
   margin: 1rem 0rem 0rem 0rem;
+}
+
+.portfolio {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 6rem 0rem 10rem;
+}
+.portfolio h1 {
+  font-size: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.7rem;
+}
+@media (min-width: 1020px) {
+  .cards {
+    grid-template-columns: repeat(4, minmax(8rem, 1fr));
+  }
+}
+
+.card {
+  background-color: #f35b5b;
+  height: 25rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 1020px) {
+  .card {
+    height: 40rem;
+  }
+}
+
+.footer {
+  background-color: #f35b5b;
+  padding: 2rem 0;
+}
+.footer p {
+  margin: 0;
+  color: #FFFFFF;
+  text-align: center;
 }/*# sourceMappingURL=app.css.map */
