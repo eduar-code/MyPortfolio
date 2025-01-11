@@ -28,6 +28,8 @@
     height: 25rem;
     transition: transform .2s;
     cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 0rem .1rem .5rem .1rem v.$lightgrey;
 
     &:hover {
        transform: scale(1.1);
