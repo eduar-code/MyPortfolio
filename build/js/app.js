@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     navFixed();
+    eventListeners();
     //scrollNav();
 });
 
@@ -20,4 +21,23 @@ function navFixed() {
             //photo.classList.add('enabled_photo');
         }
     })
+}
+
+function eventListeners() {
+    const mobileMenu = document.querySelector('.mobile-menu');
+    mobileMenu.addEventListener('click', navegacionResponsive);
+
+}
+
+function navegacionResponsive() {
+    const navegacion = document.querySelector('.nav-main');
+
+    if (navegacion.classList.contains('mostrar')) {
+        navegacion.classList.remove('mostrar');
+    } else {
+        navegacion.classList.add('mostrar');
+    }
+
+    //o una mas corta 
+    //navegacion.classList.toggle('mostrar');
 }

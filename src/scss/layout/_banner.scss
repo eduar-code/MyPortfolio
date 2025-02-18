@@ -14,9 +14,18 @@
         align-items: center; // de contenido video y desde ahi se acomoda
     }
 
-    img {
+    .dark-mode-boton {
+        position: absolute;
+        right: 5%;
+        margin: 5rem;
+        width: 3rem;
+        filter: invert(100%);
+    }
+
+    .img-banner {
         height: 40rem;
     }
+
 }
 
 .content-banner {
