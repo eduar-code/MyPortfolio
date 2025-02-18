@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <div class="banner">
+
+    <header class="header">
         <div class="overlay">
-            <div class="content-banner">
+            <div class="content-header">
                 <h2>Hello, I am</h2>
                 <h1>Alexis Eduardo</h1>
                 <p>Software developer | Game daveloper | VR/AR | Web developer </p>
@@ -24,37 +25,36 @@
             <img class="dark-mode-boton" src="src/img/gallery/full/dark-mode.svg">
         </div>
         <picture>
-            <img class=img-banner src="src/img/gallery/full/banner.jpg" alt="Banner">
+            <source srcset="build/img/gallery/full/banner.webp" type="image/webp">
+            <source srcset="build/img/gallery/full/banner.jpg" type="image/jpeg">
+            <img loading="lazy" class=img-banner src="build/img/gallery/full/banner.jpg" alt="Banner">
         </picture>
-
-    </div>
-
-    <header class="header">
-        <div class="content-header">
-            <div class="mobile-menu">
-                <img src="src/img/gallery/full/barras.svg" alt="icono menu responsive">
-            </div>
-            <nav class=" nav-main">
-                <div class="nav-main_option ">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#resume">Resume</a>
-                </div>
-                <picture class="nav-main_option">
-                    <img class="photo" src="src/img/gallery/full/me.png" alt="Yo">
-                    <div class="nav-main_option_name">
-                        <p>Alexis Eduardo</p>
-                        <p>Software Engineer</p>
-                    </div>
-                </picture>
-                <div class="nav-main_option">
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#extra">Extra</a>
-                </div>
-            </nav>
-        </div>
     </header>
+
+    <div class="navigationbar">
+        <div class="mobile-menu">
+            <img src="src/img/gallery/full/barras.svg" alt="icono menu responsive">
+        </div>
+        <nav class="navigationbar-content">
+            <div class="navigationbar-options">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#resume">Resume</a>
+            </div>
+            <picture class="navigationbar-options">
+                <img class="photo" src="src/img/gallery/full/me.png" alt="Yo">
+                <div class="navigationbar-options_name">
+                    <p>Alexis Eduardo</p>
+                    <p>Software Engineer</p>
+                </div>
+            </picture>
+            <div class="navigationbar-options">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <a href="#extra">Extra</a>
+            </div>
+        </nav>
+    </div>
 
     <section class="info">
         <div class=" content-info">

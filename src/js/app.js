@@ -7,17 +7,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function navFixed() {
-    const header = document.querySelector('.header');
+    const navigationbar = document.querySelector('.navigationbar');
     const info = document.querySelector('.info');
     const photo = document.querySelector('.photo');
 
     document.addEventListener('scroll', function () {
         if (info.getBoundingClientRect().top < 1) {
-            header.classList.add('fixed');
+            navigationbar.classList.add('fixed');
             photo.classList.add('disabled_photo');
             //photo.classList.remove('enabled_photo');
         } else {
-            header.classList.remove('fixed');
+            navigationbar.classList.remove('fixed');
             photo.classList.remove('disabled_photo');
             //photo.classList.add('enabled_photo');
         }
@@ -31,7 +31,7 @@ function eventListeners() {
 }
 
 function navegacionResponsive() {
-    const navegacion = document.querySelector('.nav-main');
+    const navegacion = document.querySelector('.navigationbar-content');
 
     if (navegacion.classList.contains('mostrar')) {
         navegacion.classList.remove('mostrar');

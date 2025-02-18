@@ -16,8 +16,22 @@
         color: v.$gris;
     }
 
-    .header{
+    .header {
+        .dark-mode-boton {
+            filter: invert(50%);
+        }
+    }
+
+    .navigationbar {
         background-color: v.$amarillo;
+
+        a {
+            color: v.$white;
+        }
+
+        p {
+            color: v.$plusgrey;
+        }
     }
 
 }
