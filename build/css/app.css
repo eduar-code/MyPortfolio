@@ -385,6 +385,23 @@ body > section {
   padding: 10rem 0;
 }
 
+.dark-mode {
+  background-color: #333333;
+}
+.dark-mode p {
+  color: #FFFFFF;
+}
+.dark-mode a,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+  color: #e1e1e1;
+}
+.dark-mode .header {
+  background-color: rgba(248, 217, 59, 0.8431372549);
+}
+
 .header {
   background-color: #FFFFFF;
   box-shadow: 0.1rem 0.2rem 0.3rem #d7d7d7;
@@ -543,8 +560,11 @@ body > section {
   position: absolute;
   right: 5%;
   margin: 5rem;
-  width: 3rem;
+  width: 4rem;
   filter: invert(100%);
+}
+.banner .dark-mode-boton:hover {
+  cursor: pointer;
 }
 .banner .img-banner {
   height: 40rem;

@@ -18,8 +18,12 @@
         position: absolute;
         right: 5%;
         margin: 5rem;
-        width: 3rem;
+        width: 4rem;
         filter: invert(100%);
+
+        &:hover{
+            cursor: pointer;
+        }
     }
 
     .img-banner {
